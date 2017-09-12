@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-	DIS_AUT='ytrue'
+	DIS_AUT='ytru'
     }
     stages {
         stage('Build') {
