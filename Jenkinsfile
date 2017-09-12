@@ -8,11 +8,5 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            mail to: "robertd@aegisgrp.com",
-                subject: "FAILED",
-                body: "It failed."       
-        }
-    }
+    
 }
