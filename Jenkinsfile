@@ -1,14 +1,18 @@
 pipeline {
     agent any
 
-    environment {
-	DIS_AUT='ytruy'
-    }
     stages {
         stage('Build') {
             steps {
-                bat 'printenv'
+                sh 'echo "FAIL"; exit 1'
             }
+        }
+    }
+    post {
+        always {
+            mail to: "robertd@aegisgrp.com",
+                subject: "FAILED",
+                body: "It failed."       
         }
     }
 }
