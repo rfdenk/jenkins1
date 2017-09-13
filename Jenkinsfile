@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'ubuntu' }
     }
 
     stages {
         stage('Check version') {
             steps {
-                sh 'node --version'
+                sh 'echo hello'
             }
         }
     }    
