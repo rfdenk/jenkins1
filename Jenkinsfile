@@ -1,15 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
 
     stages {
-        stage('Build') {
+        stage('Check version') {
             steps {
-                sh 'echo "OK"; exit 0'
-            }
-        }
-        stage('Check') {
-            steps {
-                input "Check this to see if it is okay?"
+                sh 'node --version'
             }
         }
     }    
