@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Check') {
             steps {
-                input "Check this to see if it is okay"
+                input "Check this to see if it is okay?"
             }
         }
     }    
