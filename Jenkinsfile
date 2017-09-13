@@ -7,6 +7,8 @@ pipeline {
                 sh 'echo "OK"; exit 0'
             }
         }
-    }
-    
+        stage('Check') {
+            input "Check this"
+        }
+    }    
 }
