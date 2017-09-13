@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'ubuntu' }
-    }
+    agent any
 
     stages {
         stage('Check version') {
